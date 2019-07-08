@@ -22,7 +22,7 @@ Route::group(['prefix'=>'frontend'],function($router){
 });
 
 Route::group(['prefix'=>'backend'],function($router){
-	$router->get('/','BackendController@index');
+	$router->get('/','BackendController@index')->middleware('auth');
 });
 // Route::get("/test",function(){
 // 	return "This is test";
